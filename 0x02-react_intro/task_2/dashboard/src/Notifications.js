@@ -1,12 +1,19 @@
-import React from "react";
-import "./Notifications.css";
+export function getFullYear() {
+	return new Date().getFullYear();
+}
 
-const Notifications = () => {
-	return (
-		<div className="Notifications">
-			<p>Here is the list of notifications</p>
-		</div>
-	);
-};
+export function getFooterCopy(isIndex) {
+	let msg;
 
-export default Notifications;
+	if (isIndex) {
+		msg = "Holberton School";
+	} else {
+		msg = "Holberton School main dashboard";
+	}
+
+	return msg;
+}
+
+export function getLatestNotification() {
+	return "<strong>Urgent requirement</strong> - complete by EOD";
+}
